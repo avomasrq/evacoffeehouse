@@ -1,70 +1,85 @@
-import { Heart, Users, Coffee } from 'lucide-react';
+import { Heart, Users, Coffee, Leaf } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function About() {
+  const { t } = useLanguage();
   return (
-    <section className="py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5">
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-64 h-64 bg-amber-400 rounded-full blur-3xl animate-float-slow"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
-          />
-        ))}
-      </div>
+    <section id="about" className="py-24 bg-gradient-to-b from-white via-[#faf9f7] to-white relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#c4b550]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#c4b550]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4">
-            Our Atmosphere
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto" />
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Heart className="text-white" size={32} />
-            </div>
-            <h3 className="text-xl font-semibold text-amber-900 mb-3">Pet-Friendly</h3>
-            <p className="text-amber-700">
-              Bring your furry friends along! We welcome pets with open arms and hearts.
-            </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-20 relative">
+          <div className="inline-flex items-center gap-2 text-[#c4b550] text-sm uppercase tracking-wider mb-6 font-medium">
+            <Leaf size={16} className="animate-pulse" />
+            <span>{t('about.title')}</span>
+            <Leaf size={16} className="animate-pulse" />
           </div>
-
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Coffee className="text-white" size={32} />
-            </div>
-            <h3 className="text-xl font-semibold text-amber-900 mb-3">Cozy Interiors</h3>
-            <p className="text-amber-700">
-              Warm, inviting spaces designed for comfort and relaxation throughout the day.
-            </p>
-          </div>
-
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="text-white" size={32} />
-            </div>
-            <h3 className="text-xl font-semibold text-amber-900 mb-3">Friendly Staff</h3>
-            <p className="text-amber-700">
-              Our team is here to make sure every visit feels like coming home.
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-12 shadow-xl text-center">
-          <p className="text-xl md:text-2xl text-amber-800 leading-relaxed font-light">
-            A pet-friendly space with cozy interiors and friendly staff —
-            <br />
-            <span className="font-semibold text-amber-900">
-              where good mornings last all day.
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-light text-[#2c2416] mb-6 tracking-tight relative">
+            <span className="relative">
+              {t('about.heading')}
+              <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-[#c4b550] to-transparent opacity-40" />
             </span>
-          </p>
+          </h2>
+          <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#c4b550]/40 to-transparent mx-auto mb-6" />
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-20">
+          <div className="group text-center relative">
+            <div className="absolute -inset-4 bg-gradient-to-br from-[#c4b550]/10 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+            <div className="relative">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#2c2416] to-[#4a3428] rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#c4b550]/30">
+                <Heart className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-light text-[#2c2416] mb-4 group-hover:text-[#c4b550] transition-colors">{t('about.petFriendly')}</h3>
+              <p className="text-[#2c2416]/70 leading-relaxed font-light">
+                {t('about.petFriendlyDesc')}
+              </p>
+            </div>
+          </div>
+
+          <div className="group text-center relative">
+            <div className="absolute -inset-4 bg-gradient-to-br from-[#c4b550]/10 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+            <div className="relative">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#2c2416] to-[#4a3428] rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#c4b550]/30">
+                <Coffee className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-light text-[#2c2416] mb-4 group-hover:text-[#c4b550] transition-colors">{t('about.cozyInteriors')}</h3>
+              <p className="text-[#2c2416]/70 leading-relaxed font-light">
+                {t('about.cozyInteriorsDesc')}
+              </p>
+            </div>
+          </div>
+
+          <div className="group text-center relative">
+            <div className="absolute -inset-4 bg-gradient-to-br from-[#c4b550]/10 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl" />
+            <div className="relative">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#2c2416] to-[#4a3428] rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#c4b550]/30">
+                <Users className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-light text-[#2c2416] mb-4 group-hover:text-[#c4b550] transition-colors">{t('about.friendlyStaff')}</h3>
+              <p className="text-[#2c2416]/70 leading-relaxed font-light">
+                {t('about.friendlyStaffDesc')}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Quote Section */}
+        <div className="max-w-4xl mx-auto relative">
+          <div className="absolute -inset-1 bg-gradient-to-r from-[#c4b550]/20 via-transparent to-[#c4b550]/20 rounded-3xl blur opacity-50" />
+          <div className="relative bg-gradient-to-br from-[#faf9f7] to-white rounded-3xl p-12 md:p-16 text-center border border-[#c4b550]/20 shadow-xl">
+            <div className="text-6xl text-[#c4b550]/20 mb-8 font-serif">"</div>
+            <p className="text-2xl md:text-3xl text-[#2c2416] leading-relaxed font-light mb-6">
+              {t('about.quote')}
+            </p>
+            <p className="text-xl md:text-2xl text-[#c4b550] font-light italic">
+              {t('about.quoteEnd')}
+            </p>
+          </div>
         </div>
       </div>
     </section>
