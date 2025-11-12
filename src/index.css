@@ -11,7 +11,8 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    @apply bg-white text-[#2c2416];
+    @apply text-[#2c2416];
+    background-color: #f5f1eb;
   }
 
   h1, h2, h3, h4, h5, h6 {

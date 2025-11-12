@@ -4,7 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 export default function About() {
   const { t } = useLanguage();
   return (
-    <section id="about" className="py-24 bg-gradient-to-b from-white via-[#faf9f7] to-white relative overflow-hidden">
+    <section id="about" className="py-24 relative overflow-hidden" style={{ backgroundColor: '#f5f1eb' }}>
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#c4b550]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#c4b550]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />

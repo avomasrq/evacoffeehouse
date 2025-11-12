@@ -21,7 +21,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
 
   const getItemName = (item: any) => {
     if (language === 'ru') return item.nameRu;
-    if (language === 'kz') return item.nameRu; // Add Kazakh names if needed
+    if (language === 'kz') return item.nameKz || item.nameRu;
     return item.name;
   };
 

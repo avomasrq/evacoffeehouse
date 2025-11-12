@@ -4,7 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 export default function Contact() {
   const { t } = useLanguage();
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-[#faf9f7] to-white relative overflow-hidden">
+    <section id="contact" className="py-24 relative overflow-hidden" style={{ backgroundColor: '#f5f1eb' }}>
       {/* Decorative Elements */}
       <div className="absolute top-0 left-1/4 w-72 h-72 bg-[#c4b550]/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-[#c4b550]/5 rounded-full blur-3xl" />
