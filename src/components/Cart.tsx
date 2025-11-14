@@ -70,8 +70,8 @@ export default function Cart({ isOpen, onClose }: CartProps) {
               >
                 <X size={16} className="sm:w-[18px] sm:h-[18px] text-white" />
               </button>
-              <h2 className="text-xl sm:text-2xl font-light mb-1 sm:mb-2">Coffee Milka</h2>
-              <p className="text-white/80 text-xs sm:text-sm">Байтурсынова, 141, Almaty</p>
+              <h2 className="text-xl sm:text-2xl font-light mb-1 sm:mb-2">Eva Coffee House</h2>
+              <p className="text-white/80 text-xs sm:text-sm">Almaty, Kazakhstan</p>
               <p className="text-white/60 text-[10px] sm:text-xs mt-1 sm:mt-2">
                 {new Date().toLocaleDateString(language === 'ru' ? 'ru-RU' : language === 'kz' ? 'kk-KZ' : 'en-US', {
                   day: '2-digit',

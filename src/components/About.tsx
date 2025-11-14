@@ -1,4 +1,4 @@
-import { Heart, Users, Coffee, Leaf } from 'lucide-react';
+import { Heart, Users, Coffee, Leaf, Bean, UtensilsCrossed } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function About() {
@@ -64,6 +64,48 @@ export default function About() {
               <p className="text-[#2c2416]/70 leading-relaxed font-light">
                 {t('about.friendlyStaffDesc')}
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* What They Offer Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-light text-[#2c2416] mb-4">
+              {t('about.whatWeOffer')}
+            </h3>
+            <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#c4b550]/40 to-transparent mx-auto" />
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="group bg-white rounded-2xl p-8 border border-[#2c2416]/5 hover:shadow-xl hover:border-[#c4b550]/30 transition-all duration-300 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#c4b550]/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="flex items-start gap-5 relative z-10">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#2c2416] to-[#4a3428] rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#c4b550]/30 transition-all duration-300">
+                  <Bean className="text-white" size={24} />
+                </div>
+                <div>
+                  <h4 className="text-xl font-medium text-[#2c2416] mb-2">{t('about.arabicaCoffee')}</h4>
+                  <p className="text-[#2c2416]/70 leading-relaxed font-light">
+                    {t('about.arabicaCoffeeDesc')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-8 border border-[#2c2416]/5 hover:shadow-xl hover:border-[#c4b550]/30 transition-all duration-300 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#c4b550]/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="flex items-start gap-5 relative z-10">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#2c2416] to-[#4a3428] rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-[#c4b550]/30 transition-all duration-300">
+                  <UtensilsCrossed className="text-white" size={24} />
+                </div>
+                <div>
+                  <h4 className="text-xl font-medium text-[#2c2416] mb-2">{t('about.allDayBreakfast')}</h4>
+                  <p className="text-[#2c2416]/70 leading-relaxed font-light">
+                    {t('about.allDayBreakfastDesc')}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

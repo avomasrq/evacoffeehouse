@@ -68,7 +68,7 @@ export default function Navigation({ onCartOpen }: NavigationProps) {
                   : 'text-white'
               }`}
             >
-              Coffee <span className="italic text-[#c4b550]">Milka</span>
+              <span className="italic text-[#c4b550]">Eva Coffee House</span>
             </span>
           </button>
 

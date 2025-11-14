@@ -40,9 +40,21 @@ export default function Contact() {
                   <MapPin className="text-white" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-medium text-[#2c2416] mb-2">{t('contact.location')}</h3>
-                  <p className="text-[#2c2416]/80 text-lg mb-1">Байтурсынова, 141</p>
-                  <p className="text-[#2c2416]/60">Almaty, Kazakhstan</p>
+                  <h3 className="text-xl font-medium text-[#2c2416] mb-4">{t('contact.location')}</h3>
+                  <div className="space-y-3">
+                    <div>
+                      <p className="text-[#2c2416]/80 text-lg mb-1">Kazakhfilm microdistrict, 19B</p>
+                      <p className="text-[#2c2416]/60">Almaty, Kazakhstan</p>
+                    </div>
+                    <div className="border-t border-[#2c2416]/10 pt-3">
+                      <p className="text-[#2c2416]/80 text-lg mb-1">Gagarin Avenue, 287B</p>
+                      <p className="text-[#2c2416]/60">Almaty, Kazakhstan</p>
+                    </div>
+                    <div className="border-t border-[#2c2416]/10 pt-3">
+                      <p className="text-[#2c2416]/80 text-lg mb-1">Auezov Street, 48</p>
+                      <p className="text-[#2c2416]/60">Almaty, Kazakhstan</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -70,10 +82,10 @@ export default function Contact() {
                 <div>
                   <h3 className="text-xl font-medium text-[#2c2416] mb-2">{t('contact.contact')}</h3>
                   <a
-                    href="tel:+77771725414"
+                    href="tel:+77073500757"
                     className="text-[#2c2416]/80 text-lg hover:text-[#2c2416] transition-colors"
                   >
-                    +7 777 172 5414
+                    +7 707 350 0757
                   </a>
                 </div>
               </div>
@@ -90,7 +102,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Coffee Milka Location"
+              title="Eva Coffee House Location"
             />
           </div>
         </div>
@@ -98,7 +110,7 @@ export default function Contact() {
         {/* Order Options */}
         <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           <a
-            href="https://eda.yandex.ru/restaurant/coffee_milka?utm_campaign=superapp_taxi_web&utm_medium=referral&utm_source=rst_shared_link"
+            href="https://eda.yandex.kz/en-kz/r/eva_coffee_house_ex_coffee_original_kazahfil_m?placeSlug=coffee_original"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-white rounded-2xl p-8 border border-[#2c2416]/5 hover:border-[#c4b550]/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
@@ -118,7 +130,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://wa.me/77771725414"
+            href="https://wa.me/77073500757"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-white rounded-2xl p-8 border border-[#2c2416]/5 hover:border-[#c4b550]/30 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"

@@ -22,7 +22,7 @@ export default function Footer() {
                 <div className="absolute inset-0 bg-[#c4b550]/30 rounded-full blur-md animate-pulse" />
               </div>
               <h3 className="text-2xl font-light">
-                Coffee <span className="italic text-[#c4b550]">Milka</span>
+                <span className="italic text-[#c4b550]">Eva Coffee House</span>
               </h3>
             </div>
             <p className="text-white/70 font-light leading-relaxed">
@@ -33,14 +33,16 @@ export default function Footer() {
           <div>
             <h4 className="text-sm uppercase tracking-wider mb-6 text-white/80">{t('footer.contact')}</h4>
             <div className="space-y-3 text-white/70 font-light">
-              <p>Байтурсынова, 141</p>
+              <p>Kazakhfilm microdistrict, 19B</p>
+              <p>Gagarin Avenue, 287B</p>
+              <p>Auezov Street, 48</p>
               <p>Almaty, Kazakhstan</p>
               <p>08:00 — 22:00 Daily</p>
               <a
-                href="tel:+77771725414"
+                href="tel:+77073500757"
                 className="block hover:text-white transition-colors"
               >
-                +7 777 172 5414
+                +7 707 350 0757
               </a>
             </div>
           </div>
@@ -63,7 +65,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8">
           <p className="text-center text-white/60 text-sm font-light">
-            © {new Date().getFullYear()} Coffee Milka. {t('footer.rights')}
+            © {new Date().getFullYear()} Eva Coffee House. {t('footer.rights')}
           </p>
         </div>
       </div>

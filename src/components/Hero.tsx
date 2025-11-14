@@ -87,10 +87,10 @@ export default function Hero() {
             <Coffee size={80} className="sm:w-24 sm:h-24 text-[#c4b550]" />
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-light mb-4 sm:mb-6 tracking-tight leading-none px-2 relative">
-            <span className="coffee-text-gradient text-shadow-glow">Coffee</span>
+            <span className="coffee-text-gradient text-shadow-glow">Eva</span>
             <br />
             <span className="font-normal italic text-white relative">
-              Milka
+              Coffee House
               <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#c4b550] to-transparent opacity-60" />
             </span>
           </h1>
